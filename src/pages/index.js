@@ -4,17 +4,15 @@ import Header from "../components/Header";
 import ProductFeed from "../components/ProductFeed";
 
 export default function Home({ products }) {
-  console.log(products);
   return (
     <div className="bg-gray-100 min-h-screen">
       <Head>
-        <title>Amazon 2.0</title>
+        <title>The Next Amazon 2.0</title>
       </Head>
 
       {/* ---- TO BEGIN, delete this section and GET CODING!!! ---- */}
       {/* Header */}
       <Header />
-      {/* ---- ---- */}
       <main className="max-w-screen-2xl mx-auto">
         {/* Banner */}
         <Banner />
@@ -29,7 +27,6 @@ export async function getStaticProps(context) {
   const products = await fetch("https://fakestoreapi.com/Products").then(
     (res) => res.json()
   );
-
   return {
     props: {
       products,
