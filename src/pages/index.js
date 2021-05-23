@@ -4,6 +4,7 @@ import Header from "../components/Header";
 import ProductFeed from "../components/ProductFeed";
 
 export default function Home({ products }) {
+  console.log(products);
   return (
     <div className="bg-gray-100 min-h-screen">
       <Head>
@@ -14,7 +15,7 @@ export default function Home({ products }) {
       {/* Header */}
       <Header />
       {/* ---- ---- */}
-      <main className="max-w-screen-2xl mx-auto	">
+      <main className="max-w-screen-2xl mx-auto">
         {/* Banner */}
         <Banner />
         {/* ProductFeed */}
